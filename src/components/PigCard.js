@@ -8,7 +8,6 @@ class PigCard extends React.Component {
   }
 
   pigClick = (e) => {
-
     this.setState((prevState) => {
       return {clicked: !prevState.clicked}
     })

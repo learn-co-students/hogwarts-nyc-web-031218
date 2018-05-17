@@ -1,5 +1,8 @@
 import React from 'react';
 import hogs from '../porkers_data';
+import Greased from './Greased'
+import SelectStuff from './SelectStuff'
+import SearchNames from './SearchNames'
 import PigCard from './PigCard';
 
 class PigIndex extends React.Component {
@@ -9,10 +12,9 @@ class PigIndex extends React.Component {
     weight: false,
     name: false,
     option: '',
-    nameText: ''
+    nameText: '',
+    hogs: hogs
   }
-
-
 
   greased = () => {
     this.setState((prevState) => {
@@ -44,27 +46,25 @@ class PigIndex extends React.Component {
     })
   }
 
+  sortShit = () => {
+    (a, b) => {
+      if (a.name > b.name) {return 1}
+      if (a.name < b.name){return -1}
+      return 0
+    }
+  }
+
   render(){
-    let allPigs = hogs
+    let allPigs = this.state.hogs
 
     if(this.state.greased){
        allPigs = hogs.filter(hog => { return hog.greased})
     }
 
-    if(this.state.weight){
-      allPigs = allPigs.sort((a, b) => { return a.weight - b.weight})
-    }
+    if(this.state.weight){allPigs = allPigs.sort((a, b) => { return a.weight - b.weight})}
 
     if(this.state.name){
-      allPigs = allPigs.sort((a, b) => {
-        if (a.name > b.name) {
-          return 1
-        }
-        if (a.name < b.name){
-          return -1
-        }
-        return 0
-      })
+      allPigs = allPigs.sort(this.sortShit)
     }
 
     if(this.state.nameText){
@@ -76,19 +76,11 @@ class PigIndex extends React.Component {
       return <PigCard name={hog.name} specialty={hog.specialty} medal={hog.medal} weight={hog.weight}/>
     })
     return (
-        <div id='center'>
-          <label>Greased ? </label>
-          <br/>
-          <input type='checkBox' onChange={this.greased}></input>
-          <br/>
-          <input type='text' placeholder='name' onKeyUp={this.nameSearch}></input>
-
-          <select value={this.state.option} onChange={this.sortWeight}>
-            <option value='weight'>weight</option>
-            <option value='name'>name</option>
-          </select>
-          <br/>
-          {allHogs}
+        <div>
+          <Greased greasedFunc={this.greased}/>
+          <SearchNames nameSearch={this.nameSearch}/>
+          <SelectStuff sortBy={this.sortWeight} selectOption={this.state.option}/>
+            {allHogs}
         </div>
     )
   }
