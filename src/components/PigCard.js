@@ -31,15 +31,16 @@ class PigCard extends React.Component {
     }
 
     return (
-      <div className="ui eight wide column">
-        <div style={divStyle} onClick={this.toggleHidden}>
-          <h2>{this.props.name}</h2>
-          <img src={this.props.image} alt="" />
-          {!this.state.isHidden && <PigDetail {...this.props} />}
+      <div className="ui four wide column">
+        <div className="pigTile">
+          <div style={divStyle} onClick={this.toggleHidden}>
+            <h3>{this.props.name}</h3>
+            <img src={this.props.image} alt="" />
+            {!this.state.isHidden && <PigDetail {...this.props} />}
+          </div>
+
+          <HideCard pigText={this.state.pigText} toggleHidePig={this.toggleHidePig}/>
         </div>
-
-        <HideCard pigText={this.state.pigText} toggleHidePig={this.toggleHidePig}/>
-
       </div>
     )
   }
