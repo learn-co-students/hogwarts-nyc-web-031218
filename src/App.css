@@ -1,6 +1,15 @@
 .App {
   margin: 0% 5% 0% 5%;
+  border: 5px dotted pink;
   text-align: center;
+  background: black;
+  color:pink;
+  padding: 2%;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
 }
 
 .TwirlyPig {
@@ -13,7 +22,9 @@
 }
 
 .navWrapper {
+  padding-bottom: 5%;
   margin-bottom: 2%;
+  border: 4px solid pink;
 }
 
 .filterWrapper {
@@ -64,7 +75,7 @@ ul {
 
 .subtleText {
   color: #D1D1D1;
-  font-size: .75em; 
+  font-size: .75em;
 }
 
 
@@ -132,6 +143,31 @@ ul {
   padding: 1%;
   clear: both;
 }
+
+
+.hogCard{
+  border: 2px solid pink;
+  padding: 5px;
+  margin: 10px;
+  background: black;
+  color:white;
+}
+#hog-title{
+  text-decoration: underline;
+}
+
+#hog-deets{
+  border: 2px dotted pink;
+  padding: 2px;
+  margin: 2px;
+}
+
+#hog-name{
+  border: 5px solid pink;
+  padding: 5px;
+  margin: 5px;
+}
+
 
 
 @keyframes App-logo-spin {
