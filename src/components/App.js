@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
 import '../App.css';
 import Nav from './Nav'
-import hogs from '../porkers_data';
+import PigIndex from './PigIndex';
 
-class App extends Component {
-  render() {
+
+const App = () => {
     return (
       <div className="App">
           < Nav />
-
+        < PigIndex />
       </div>
     )
   }
-}
 
 export default App;
