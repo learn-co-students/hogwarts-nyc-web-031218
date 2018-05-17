@@ -9,20 +9,20 @@ class Mainbox extends React.Component {
 
   filterByGreased = () => {
     this.setState({
-      pigs: this.state.pigs.filter((hog) => {return hog.greased}),
+      pigs: this.state.pigs.filter((hog) => { return hog.greased }),
     })
   }
 
   sortByWeight = () => {
     const hogWeight = 'weight as a ratio of hog to LG - 24.7 Cu. Ft. French Door Refrigerator with Thru-the-Door Ice and Water'
     this.setState({
-      pigs: this.state.pigs.sort((a,b) => {return a[hogWeight] - b[hogWeight]})
+      pigs: this.state.pigs.sort((a,b) => { return a[hogWeight] - b[hogWeight] })
     })
   }
 
   sortByName = () => {
     this.setState({
-      pigs: this.state.pigs.sort((a, b) => { return a.name.toLowerCase().localeCompare(b.name.toLowerCase()); })
+      pigs: this.state.pigs.sort((a, b) => { return a.name.toLowerCase().localeCompare(b.name.toLowerCase()) })
     })
   }
 
