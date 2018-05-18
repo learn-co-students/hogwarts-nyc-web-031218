@@ -64,7 +64,7 @@ ul {
 
 .subtleText {
   color: #D1D1D1;
-  font-size: .75em; 
+  font-size: .75em;
 }
 
 
@@ -72,13 +72,16 @@ ul {
   margin: auto;
 }
 
+#center {
+    text-align: center;
+}
 
 .pigTile {
   display: inline;
   background-repeat: no-repeat;
   background-position: center 90%;
   float: left;
-  margin: 2%;
+  margin: 20px 20px;
   padding: 1%;
   outline: #3B0B0B dotted thick;
   transition: 0.75s;
