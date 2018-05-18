@@ -19,17 +19,20 @@ class TheHog extends React.Component {
   clickHandle = (event) => {
     event.preventDefault()
     console.log(event.target)
-      this.setState({
-        isClicked: true
-      })
+      if(!this.state.isClicked){
+      this.setState({isClicked: true})
+      }else{
+      this.setState({isClicked: false})
+    }
   }
 
   render() {
-    console.log(this.props)
+
     let betterUrl = require(`../hog-imgs/${this.props.hogInfo.name.split(" ").join("_").toLowerCase()}.jpg`)
     return(
 
       <div className="hogCard" onClick={this.clickHandle}>
+
       <h2 id='hog-name'>{this.props.hogInfo.name}</h2>
       <img src={betterUrl} alt=""></img>
       <h2 id='hog-details'> {this.state.isClicked ? <HogDetails hogs = {this.props.hogInfo}/> : null} </h2>

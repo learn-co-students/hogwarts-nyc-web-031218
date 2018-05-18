@@ -1,7 +1,7 @@
 import piggy from '../porco.png';
 import React from 'react';
 
-const Nav = () => {
+const Nav = (props) => {
   return (
     <div className="navWrapper">
       <img src={piggy} className="App-logo" alt="piggy" />
@@ -13,6 +13,8 @@ const Nav = () => {
       <br></br>
       <br></br>
       <h3 className="normalText">A React App for County Fair Hog Fans</h3>
+      <button onClick={()=> props.handleGreasyClick()}>Greased</button>
+      <button onClick={()=> props.handleAZSortClick()}>A to Z</button>
     </div>
   )
 }
