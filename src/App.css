@@ -25,17 +25,28 @@
   padding-bottom: 5%;
   margin-bottom: 2%;
   border: 4px solid pink;
+  border-radius: 1pc;
+  background:white
 }
 
 .filterWrapper {
   margin: 2% 0% 2% 0%;
 }
 
+.normalText{
+  padding-top: -10px;
+  font-weight: bold;
+  font-size: large;
+}
+
 .headerText {
   color: #F5A9BC;
-  font-size: 3em;
+  font-size: 7em;
+  text-shadow: 5px 5px black;
+  padding-top: 25px;
   margin: 0% 2% 0% 2%;
 }
+
 
 .largeHeader {
   font-size: 3.5em;
@@ -51,7 +62,8 @@
 
 .normalText {
   font-family: Georgia, serif;
-  font-size: .75em;
+  font-size: 2em;
+  text-shadow: 3px 1px black
 }
 
 .hoggyText {
@@ -69,13 +81,13 @@ ul {
 
 .normalText ul {
   font-family: Georgia, serif;
-  font-size: .75em;
+  font-size: .75;
   text-align: left;
 }
 
 .subtleText {
   color: #D1D1D1;
-  font-size: .75em;
+  font-size: 5em;
 }
 
 
@@ -151,21 +163,41 @@ ul {
   margin: 10px;
   background: black;
   color:white;
+  border-radius: 1pc;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.hogCard:hover{
+  background-color: pink;
+  border: 2px solid white;
+  padding: 5px;
+  margin: 10px;
+  color:white;
+  border-radius: 1pc; /* Green */
 }
 #hog-title{
-  text-decoration: underline;
+  border: 5px solid pink;
+  margin: 10px;
+  border-radius: 1pc;
+  padding: 5px;
+  text-shadow: 2px 2px pink;
 }
 
 #hog-deets{
   border: 2px dotted pink;
   padding: 2px;
   margin: 2px;
+  border-radius: 1pc;
 }
 
 #hog-name{
   border: 5px solid pink;
   padding: 5px;
   margin: 5px;
+  border-radius: 1pc;
+  text-shadow: 2px 2px pink;
+
 }
 
 #filter{
@@ -190,6 +222,17 @@ ul {
   margin-top: -5px;
   padding: 4px;
   border-radius: 2pc;
+}
+
+button{
+    margin-bottom: 10px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+button:hover{
+    background-color: pink; /* Green */
+    color: white;
 }
 
 

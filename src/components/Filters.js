@@ -24,7 +24,7 @@ class Filters extends React.Component{
     console.log(namedPigs.sort())
   }
   weightHandler = (event) => {
-    console.log(event.target)
+    console.log((this.props.filter[0]['weight as a ratio of hog to LG - 24.7 Cu. Ft. French Door Refrigerator with Thru-the-Door Ice and Water']))
   }
 
   render() {
