@@ -5,6 +5,7 @@
   background: black;
   color:pink;
   padding: 2%;
+  width: 675px;
 }
 
 .hidden {
@@ -160,6 +161,7 @@ ul {
 .hogCard{
   border: 2px solid pink;
   padding: 5px;
+  margin: 10px;
   background: black;
   color:white;
   border-radius: 1pc;
