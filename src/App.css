@@ -160,7 +160,6 @@ ul {
 .hogCard{
   border: 2px solid pink;
   padding: 5px;
-  margin: 10px;
   background: black;
   color:white;
   border-radius: 1pc;
@@ -197,7 +196,16 @@ ul {
   margin: 5px;
   border-radius: 1pc;
   text-shadow: 2px 2px pink;
+}
 
+.nav-buttons{
+  border: 2px solid pink;
+  padding: 5px;
+  border-radius: 2pc;
+  align-content: center;
+  width: 150px;
+  height: 50px;
+  background: black;
 }
 
 

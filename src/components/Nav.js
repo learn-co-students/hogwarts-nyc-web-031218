@@ -13,8 +13,10 @@ const Nav = (props) => {
       <br></br>
       <br></br>
       <h3 className="normalText">A React App for County Fair Hog Fans</h3>
+      <div className="nav-buttons">
       <button onClick={()=> props.handleGreasyClick()}>Greased</button>
       <button onClick={()=> props.handleAZSortClick()}>A to Z</button>
+      </div>
     </div>
   )
 }
